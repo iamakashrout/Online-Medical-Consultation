@@ -225,3 +225,9 @@ body {
   min-height: 1px;
   padding: 1rem;
 }
+
+/* FOR DARK MODE AND LIGHT MODE */
+html.dark {
+  background-color: black;
+  color: white;
+}

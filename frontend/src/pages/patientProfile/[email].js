@@ -4,6 +4,8 @@ import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { BASE_URL } from "../../helper.js";
+import { useTheme } from "../../../context/ThemeContext";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 // import styles from '../../styles/profile.css'
 import { MdDelete } from "react-icons/md";
@@ -12,6 +14,7 @@ const PatientProfile = () => {
   const { data: session } = useSession();
   const [patient, setPatient] = useState({});
   const email = router.query.email;
+    const { theme, toggleTheme } = useTheme();
   // const curr_user = session.user.email;
   // console.log("this is the session info, ", session);
   useEffect(() => {
